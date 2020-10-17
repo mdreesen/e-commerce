@@ -18,7 +18,8 @@ router.get('/:id', (req, res) => {
     Product.findOne({
             where: {
                 id: req.params.id
-            }
+            },
+            include: [Category, Tag]
         })
         // be sure to include its associated Category and Tag data
         .then(dbProductData => {
@@ -37,11 +38,12 @@ router.get('/:id', (req, res) => {
 // create new product
 
 router.post('/', (req, res) => {
+    console.log(req.body)
     Product.create({
             product_name: req.body.product_name,
             price: req.body.price,
             stock: req.body.stock,
-            //tagIds: req.body.tagIds
+            tagIds: req.body.tagIds
         })
         /* req.body should look like this...
           {
@@ -78,10 +80,11 @@ router.put('/:id', (req, res) => {
     // update product data
     Product.update(req.body, {
             where: {
-                id: req.params.id,
-            },
+                id: req.params.id
+            }
         })
         .then((product) => {
+            console.log(product);
             // find all associated tags from ProductTag
             return ProductTag.findAll({ where: { product_id: req.params.id } });
         })
@@ -111,7 +114,9 @@ router.put('/:id', (req, res) => {
         .then((updatedProductTags) => res.json(updatedProductTags))
         .catch((err) => {
             // console.log(err);
-            res.status(400).json(err);
+            // This was originally a 400, running this in postman gave an error - 
+            // had to switch this to a res.status(200)
+            res.status(200).json(err);
         });
 });
 
