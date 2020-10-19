@@ -12,4 +12,4 @@ This is an e-commerce backend project that deals with Proucts, tags, and categor
 
 
 # Tutorial
-<iframe src="https://drive.google.com/file/d/1O_dkaGfU9SqFc9S3XuKH-WkM6Nktg3yP/preview"></iframe>
+https://drive.google.com/file/d/1O_dkaGfU9SqFc9S3XuKH-WkM6Nktg3yP/preview
