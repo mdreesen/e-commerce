@@ -5,9 +5,9 @@ This is an e-commerce backend project that deals with Proucts, tags, and categor
 
 ### Running The App:
 * npm run seed
-This will seed the tables in the db
+ -> This will seed the tables in the db
 * npm start
-This starts running the express backend server
+ -> This starts running the express backend server
  
 
 ## Used in the project
