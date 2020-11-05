@@ -1,7 +1,7 @@
 # e-commerce
 
 ## Description
-This is an e-commerce backend project that deals with Proucts, tags, and categories. This can help a small shop organize and keep up with their data.
+This is an e-commerce backend project that deals with Products, tags, and categories. This can help a small shop organize and keep up with their data.
 
 ### Running The App:
 * npm run seed
